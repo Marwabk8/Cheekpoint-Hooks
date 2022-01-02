@@ -1,8 +1,21 @@
-.App{
+/* .App{
  background-color: #282c34;
 
-}
+} */
+.bg{
 
+  background-color: #282c34;
+
+}
+/* .card{
+ height: 600px;
+
+} */
+
+.details{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:medium;
+}
 .container{
   display: flex;
   flex-wrap: wrap;
@@ -53,4 +66,7 @@ img{
   to {
     transform: rotate(360deg);
   }
+}.video{
+  height: 100%;
+  width: 100%;
 }

@@ -1,10 +1,12 @@
 
 import { useState } from 'react';
+import { Route } from 'react-router-dom';
 import Add from './add';
 import './App.css';
 import List from './List';
 import Navigation from './Navbar';
 import Star from './Star'
+import Movidetails from './movidetails';
 
 
 
@@ -178,10 +180,11 @@ function App() {
   return (
     <div className="App">
   <Navigation serach={search} setSearch={setSearch}></Navigation>
+  <Route   exact path='/' render={()=> <div className='bg'>
   <Star reating={rating} setRating={setRating}></Star>
   <Add moviedata={moviedata} setMovidata={setMovidata}></Add>
- <List moviedata= {moviedata} setMovidata= {setMovidata} search={search} rating={rating} ></List>
- 
+<List moviedata= {moviedata} setMovidata= {setMovidata} search={search} rating={rating} ></List></div>}></Route>
+<Route    path ='/details/:x'   render={(props)=><Movidetails {...props} moviedata= {moviedata} ></Movidetails>} ></Route>
     </div>
   );
 }
